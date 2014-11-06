@@ -172,9 +172,6 @@ GRAPHVIZ_VENDOR="mfenniak/graphviz"
 puts-step "Installing graphviz package"
 mkdir -p $1/$GRAPHVIZ_VENDOR
 curl $GRAPHVIZ_BINARY -o - | tar -xz -C $1/$GRAPHVIZ_VENDOR -f -
-puts-step "adjusting dot"
-dot -c
-
 # ### Finalize
 #
 
@@ -202,3 +199,6 @@ done
 
 deep-mv $BUILD_DIR $ORIG_BUILD_DIR
 deep-mv $TMP_APP_DIR $APP_DIR
+
+puts-step "adjusting dot"
+dot -c
