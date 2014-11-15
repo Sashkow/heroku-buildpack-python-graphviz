@@ -167,7 +167,7 @@ puts-step "Installing dependencies using Pip ($PIP_VERSION)"
 source $BIN_DIR/steps/collectstatic
 
 # Graphviz binary package
-GRAPHVIZ_BINARY="https://s3-us-west-2.amazonaws.com/mfenniak-graphviz/graphviz-2.30.tgz"
+GRAPHVIZ_BINARY="http://www.graphviz.org/pub/graphviz/ARCHIVE/graphviz-2.38.0.tar.gz"
 GRAPHVIZ_VENDOR="mfenniak/graphviz"
 puts-step "Installing graphviz package"
 mkdir -p $1/$GRAPHVIZ_VENDOR
